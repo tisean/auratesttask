@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Satisfaction_rating_the_case_is_closed</fullName>
+    <active>true</active>
+    <description>Enter the satisfaction rating if the case is closed</description>
+    <errorConditionFormula>AND(
+				OR(ISPICKVAL(Satisfaction_rating__c, &quot;1&quot;), ISPICKVAL(Satisfaction_rating__c, &quot;2&quot;), ISPICKVAL(Satisfaction_rating__c, &quot;3&quot;),ISPICKVAL(Satisfaction_rating__c, &quot;4&quot;), ISPICKVAL(Satisfaction_rating__c, &quot;5&quot;))
+				, 
+				NOT(ISPICKVAL(Status, &quot;Closed&quot;))
+)</errorConditionFormula>
+    <errorMessage>ХУЙНЯ</errorMessage>
+</ValidationRule>
