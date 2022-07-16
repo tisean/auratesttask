@@ -1,0 +1,19 @@
+<!-- All Supplier Map -->
+<template>
+    <lightning-card title='All available Suppliers'>
+        <template if:true={showMap}>
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="small" variant="brand"></lightning-spinner>
+            </template>
+            <template if:false={isLoading}>
+                <lightning-map map-markers={mapMarkers}></lightning-map>
+                <div slot="footer">Top 10 Only!</div>
+            </template>
+        </template>
+        <template if:false={showMap}>
+      <span class="slds-align_absolute-center">
+        No supplier to see its location!
+      </span>
+        </template>
+    </lightning-card>
+</template>
