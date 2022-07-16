@@ -1,16 +1,18 @@
 @IsTest
 private class SupplierController_Test {
     @TestSetup
-    static void setup(){
+    static void setup() {
         List<Suppliers__c> suppliers1 = new List<Suppliers__c>();
-        for(Integer i = 0; i < 150; i++){
-            Suppliers__c supplier = new Suppliers__c(Name = 'Test name'+i, City__c = 'Test City', Location__Longitude__s = i-90, Location__Latitude__s = i-90);
+        for (Integer i = 0; i < 150; i++) {
+            Suppliers__c supplier = new Suppliers__c(Name = 'Test name' + i, City__c = 'Test City',
+                    Location__Longitude__s = i - 90, Location__Latitude__s = i - 90);
             suppliers1.add(supplier);
         }
         insert suppliers1;
         List<Suppliers__c> suppliers2 = new List<Suppliers__c>();
-        for(Integer i = 0; i < 100; i++){
-            Suppliers__c supplier = new Suppliers__c(Name = 'Test name'+i, City__c = 'Another City', Location__Longitude__s = i-90, Location__Latitude__s = i-90);
+        for (Integer i = 0; i < 100; i++) {
+            Suppliers__c supplier = new Suppliers__c(Name = 'Test name' + i, City__c = 'Another City',
+                    Location__Longitude__s = i - 90, Location__Latitude__s = i - 90);
             suppliers2.add(supplier);
         }
         insert suppliers2;

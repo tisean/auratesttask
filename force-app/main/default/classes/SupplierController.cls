@@ -1,8 +1,11 @@
 public with sharing class SupplierController {
     @AuraEnabled(Cacheable=true)
     public static String getAllSuppliersByCity(String city) {
-        String query = 'SELECT Name, Location__Latitude__s, Location__Longitude__s, ' +
-                'City__c FROM Suppliers__c WHERE City__c =: city LIMIT 10';
+        String query =
+                'SELECT Name, Location__Latitude__s, Location__Longitude__s, City__c ' +
+                'FROM Suppliers__c ' +
+                'WHERE City__c =: city ' +
+                'LIMIT 10';
         return JSON.serialize(Database.query(query));
     }
 
