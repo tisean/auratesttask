@@ -1,4 +1,4 @@
-# Salesforce DX Project: Aura Code Test Task
+# Salesforce DX Project: Aura Code Test Task - Vehicle Maintenance App
 
 # Description:
 General Setup
@@ -36,31 +36,32 @@ Submit
 Send your Dev org credentials to the contact person.
 
 ## Documentation (in short):
-1. There are 2 users - Administrator and Customer service agent. But it would be correct to make one more user - Supplier manager. 
+1. Choose Vehicle Maintenance App.
+2. There are 2 users - Administrator and Customer service agent. But it would be correct to make one more user - Supplier manager. 
 (He will have access only to creating and editing suppliers, without the ability to watch, change accounts and cases. 
 And assign a customer to a service agent the ability to ONLY watch suppliers, without the ability to make changes or create them, leaving full access to Accounts and cases). 
-2. Agent has full access to suppliers, accounts and cases. But can't change read-only fields (average Account satisfaction rating).
-3. The supplier's record page shows its current position on the map.
-4. On the recode page of the account, there is a list of suppliers available in the city of the account is shown. (See Sergei Tit account - has a lot of Suppliers with the same city).
+3. Agent has full access to suppliers, accounts and cases. But can't change read-only fields (average Account satisfaction rating).
+4. The supplier's record page shows its current position on the map.
+5. On the recode page of the account, there is a list of suppliers available in the city of the account is shown. (See Sergei Tit account - has a lot of Suppliers with the same city).
 There is pagination on the first page, last page, previous and next page. 
 Pagination buttons are interactive - they become inactive under various conditions (there are no further entries, or there are no previous entries).
 There is a choice of the number of records in the table (the pagination buttons also depend - if the limits on the records are reached).
 When you click on the view icon in the table row, a modal window opens with the data of this record and the position on the map is shown. 
 At the bottom of the page there is a map that shows the top 10 suppliers for the current account, sorted by latitude.
-5. A case is created from the account registration page - standard functionality. 
+6. A case is created from the account registration page - standard functionality. 
 It would be logical to make a supplier lookup on a case so that you can choose a specific supplier, but according to the condition, the supplier object is independent. 
 Therefore, the name of the supplier can be specified in the subject.
-6. When creating a case, you cannot set a satisfaction rating - an error in the validation rule.
-7. The satisfaction rating can (and should!) be indicated if the status of the case is closed.
+7. When creating a case, you cannot set a satisfaction rating - an error in the validation rule.
+8. The satisfaction rating can (and should!) be indicated if the status of the case is closed.
 If this is not the case - when trying to save the case with the Closed status - a validation error.
-8. After the case is closed, the Average Account Satisfaction Rating is auto-updated. The trigger fires. Implemented trigger framework with handler and helper.
-9. The Customer Service Agent does not have access to manually change the Account's Average Satisfaction Rating.
-10. Tests implemented in minimal execution, no negative testing, no user testing. (But understand that it must be).
-11. Custom components created with LWC. The appearance of the components was not given much attention, although I understand that this is important.
+9. After the case is closed, the Average Account Satisfaction Rating is auto-updated. The trigger fires. Implemented trigger framework with handler and helper.
+10. The Customer Service Agent does not have access to manually change the Account's Average Satisfaction Rating.
+11. Tests implemented in minimal execution, no negative testing, no user testing. (But understand that it must be).
+12. Custom components created with LWC. The appearance of the components was not given much attention, although I understand that this is important.
 
-12. This project will develop further, acquiring new functionality, integration with external systems, mail notifications. 
+13. This project will develop further, acquiring new functionality, integration with external systems, mail notifications. 
 The plans are to indicate the distance to the account in the table of suppliers on the account, sorted by this indicator - integration is needed to translate the full address into geolocation - and further recalculation of the distance.
-13. To be continued... and much more to come.
+14. To be continued... and much more to come.
 
 
 # Total shorter
