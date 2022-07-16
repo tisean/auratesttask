@@ -57,11 +57,12 @@ If this is not the case - when trying to save the case with the Closed status - 
 9. After the case is closed, the Average Account Satisfaction Rating is auto-updated. The trigger fires. Implemented trigger framework with handler and helper.
 10. The Customer Service Agent does not have access to manually change the Account's Average Satisfaction Rating.
 11. Tests implemented in minimal execution, no negative testing, no user testing. (But understand that it must be).
-12. Custom components created with LWC. The appearance of the components was not given much attention, although I understand that this is important.
+12. There are no exception handlers, try-catch-finally and so on, although there should be. And will be added in the future.
+13. Custom components created with LWC. The appearance of the components was not given much attention, although I understand that this is important.
 
-13. This project will develop further, acquiring new functionality, integration with external systems, mail notifications. 
+14. This project will develop further, acquiring new functionality, integration with external systems, mail notifications. 
 The plans are to indicate the distance to the account in the table of suppliers on the account, sorted by this indicator - integration is needed to translate the full address into geolocation - and further recalculation of the distance.
-14. To be continued... and much more to come.
+15. To be continued... and much more to come.
 
 
 # Total shorter
