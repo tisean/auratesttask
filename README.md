@@ -42,15 +42,15 @@ Send your Dev org credentials to the contact person.
 And assign a customer to a service agent the ability to ONLY watch suppliers, without the ability to make changes or create them, leaving full access to Accounts and cases). 
 3. Agent has full access to suppliers, accounts and cases. But can't change read-only fields (average Account satisfaction rating).
 4. The supplier's record page shows its current position on the map.
-5. On the recode page of the account, there is a list of suppliers available in the city of the account is shown. (See Sergei Tit account - has a lot of Suppliers with the same city).
+5. On the record page of the account, there is a list of suppliers available in the city of the account is shown. (See Sergei Tit account - has a lot of Suppliers with the same city).
 There is pagination on the first page, last page, previous and next page. 
 Pagination buttons are interactive - they become inactive under various conditions (there are no further entries, or there are no previous entries).
 There is a choice of the number of records in the table (the pagination buttons also depend - if the limits on the records are reached).
 When you click on the view icon in the table row, a modal window opens with the data of this record and the position on the map is shown. 
 At the bottom of the page there is a map that shows the top 10 suppliers for the current account, sorted by latitude.
-6. A case is created from the account registration page - standard functionality. 
+6. A case is created from the account page - standard functionality. 
 It would be logical to make a supplier lookup on a case so that you can choose a specific supplier, but according to the condition, the supplier object is independent. 
-Therefore, the name of the supplier can be specified in the subject.
+Therefore, the name of the supplier can be specified in the subject of the Case.
 7. When creating a case, you cannot set a satisfaction rating - an error in the validation rule.
 8. The satisfaction rating can (and should!) be indicated if the status of the case is closed.
 If this is not the case - when trying to save the case with the Closed status - a validation error.
@@ -61,7 +61,7 @@ If this is not the case - when trying to save the case with the Closed status - 
 13. Custom components created with LWC. The appearance of the components was not given much attention, although I understand that this is important.
 
 14. This project will develop further, acquiring new functionality, integration with external systems, mail notifications. 
-The plans are to indicate the distance to the account in the table of suppliers on the account, sorted by this indicator - integration is needed to translate the full address into geolocation - and further recalculation of the distance.
+The plans are to indicate the distance to the account in the table of suppliers on the account, sorted by this indicator - integration is needed to convert the full address into geolocation - and further recalculation of the distance.
 15. To be continued... and much more to come.
 
 
